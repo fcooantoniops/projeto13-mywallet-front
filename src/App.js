@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalStyle from "./globalStyle";
-import SignUpScreen from "./components/SignUpScreen";
+import SignInScreen from "./components/SignInScreen/SignInScreen";
+import SignUpScreen from "./components/SignUpScreen/SignUpScreen";
 
 export default function App(){
     return(
@@ -8,7 +9,8 @@ export default function App(){
             <GlobalStyle />
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<SignUpScreen />} />
+                    <Route path="/" element={<SignInScreen />} />
+                    <Route path="/sign-up" element={<SignUpScreen />} />
                 </Routes>
             </BrowserRouter>
         </>

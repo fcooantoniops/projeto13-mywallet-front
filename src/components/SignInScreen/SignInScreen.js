@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import FormLayout from "../layouts/FormLayout";
-import PageLayout from "../layouts/PageLayout";
-import SendingButton from "../layouts/SendingButtonLayout";
+import FormLayout from "../../layouts/FormLayout";
+import PageLayout from "../../layouts/PageLayout";
+import SendingButton from "../../layouts/SendingButtonLayout";
 
-export default function SignUpScreen(){
+export default function SignInScreen(){
     return (
         <>
             <PageLayout>
@@ -16,7 +16,7 @@ export default function SignUpScreen(){
                         <input type="password" placeholder="Senha"/>
                         <SendingButton type="submit">Entrar</SendingButton>
                     </FormLayout>
-                    <Link to="/sign-in">Primeira vez? Cadastre-se!</Link>
+                    <Link to="/sign-up">Primeira vez? Cadastre-se!</Link>
                 </SignUpContainer>
             </PageLayout>
         </>
