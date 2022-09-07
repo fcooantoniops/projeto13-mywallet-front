@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import FormLayout from "../../layouts/FormLayout";
 import PageLayout from "../../layouts/PageLayout";
-import SendingButton from "../../layouts/SendingButtonLayout";
+import SendingButtonLayout from "../../layouts/SendingButtonLayout";
 
 export default function SignInScreen(){
     return (
@@ -14,7 +14,7 @@ export default function SignInScreen(){
                     <FormLayout>
                         <input type="email" placeholder="E-mail"/>
                         <input type="password" placeholder="Senha"/>
-                        <SendingButton type="submit">Entrar</SendingButton>
+                        <SendingButtonLayout type="submit">Entrar</SendingButtonLayout>
                     </FormLayout>
                     <Link to="/sign-up">Primeira vez? Cadastre-se!</Link>
                 </SignUpContainer>

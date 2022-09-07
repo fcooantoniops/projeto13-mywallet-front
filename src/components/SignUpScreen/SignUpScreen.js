@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import FormLayout from "../../layouts/FormLayout";
 import PageLayout from "../../layouts/PageLayout";
-import SendingButton from "../../layouts/SendingButtonLayout";
+import SendingButtonLayout from "../../layouts/SendingButtonLayout";
 
 export default function SignUpScreen(){
     return(
@@ -15,7 +15,7 @@ export default function SignUpScreen(){
                         <input type="email" placeholder="E-mail"/>
                         <input type="password" placeholder="Senha"/>
                         <input type="password" placeholder="Confirme a senha"/>
-                        <SendingButton type="submit">Cadastrar</SendingButton>
+                        <SendingButtonLayout type="submit">Cadastrar</SendingButtonLayout>
                     </FormLayout>
                     <Link to="/">Já tem uma conta? Entre agora!</Link>
                 </SignInScreenContainer>

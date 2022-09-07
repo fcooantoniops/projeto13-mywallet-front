@@ -8,7 +8,6 @@ const PageLayout = styled.main`
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: var(--purple);
     }
 `;
 

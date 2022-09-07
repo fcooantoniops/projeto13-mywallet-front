@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const SendingButton = styled.button`
+const SendingButtonLayout = styled.button`
     width: 100%;
     height: 46px;
     margin-bottom: 36px;
@@ -14,4 +14,4 @@ const SendingButton = styled.button`
     cursor: pointer;
 `;
 
-export default SendingButton;
+export default SendingButtonLayout;

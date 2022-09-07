@@ -68,6 +68,7 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: var(--purple);
         color: #FFFFFF;
     }
 
