@@ -14,7 +14,9 @@ export default function SignInScreen(){
                     <FormLayout>
                         <input type="email" placeholder="E-mail"/>
                         <input type="password" placeholder="Senha"/>
-                        <SendingButtonLayout type="submit">Entrar</SendingButtonLayout>
+                        <SendingButtonLayout type="submit">
+                            <Link to="/home"><p>Entrar</p></Link>
+                        </SendingButtonLayout>
                     </FormLayout>
                     <Link to="/sign-up">Primeira vez? Cadastre-se!</Link>
                 </SignUpContainer>
@@ -35,5 +37,11 @@ const SignUpContainer = styled.div`
         font-weight: 400;
         line-height: 50px;
         margin-bottom: 24px;
+    }
+    
+    p{
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 23px;
     }
 `;

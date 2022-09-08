@@ -17,11 +17,12 @@ const FormLayout = styled.form`
         background-color: #FFFFFF;
     }
 
-    input::placeholder{
+    input::placeholder {
         font-family: 'Raleway', sans-serif;
         font-size: 20px;
         font-weight: 400;
         line-height: 23px;
+        opacity: 1;
         color: #000000;
     }
 `;

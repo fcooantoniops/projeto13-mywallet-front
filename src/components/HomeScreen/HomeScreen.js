@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import PageLayout from "../../layouts/PageLayout";
 import exitIcon from "../../assets/images/exit-icon.svg";
@@ -7,16 +7,28 @@ import addIcon from "../../assets/images/add-icon.svg";
 import rmIcon from "../../assets/images/rm-icon.svg";
 
 export default function HomeScreen(){
+    const navigate = useNavigate();
     return(
         <>
             <PageLayout>
                 <HomeContainer>
                     <Header>
                         <h2>Olá, Fulano</h2>
-                        <img src={exitIcon} alt="exit"/>
+                        <img src={exitIcon} alt="exit" onClick={ () => navigate("/")}/>
                     </Header>
                     <Historic>
-                        <span>Não há registros de entrada ou saída</span>
+                        <Log>
+                            <li>
+                                <span className="date">00/00</span>
+                                <span className="description">Isso isso isso isso isso isso</span>
+                                <span className="value">00,00</span>
+                            </li>
+                            <div className="balance">
+                                <span className="balance-name">SALDO</span>
+                                <span className="balance-value">0000,00</span>
+                            </div>
+                        </Log>
+                        {/* <span>Não há registros de entrada ou saída</span> */}
                     </Historic>
                     <Footer>
                         <Link to="/new-entry">                        
@@ -66,8 +78,6 @@ const HomeContainer = styled.div`
         font-size: 17px;
         font-weight: 700;
         line-height: 20px;
-        color: #FFFFFF;
-        cursor: pointer;
     }
 `;
 
@@ -104,6 +114,60 @@ const Historic = styled.div`
         line-height: 23px;
         text-align: center;
         color: var(--dark-grey);
+    }
+`;
+
+const Log = styled.ul`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 22px 10px 10px 10px;
+
+    li{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    span{
+        width: fit-content;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+    }
+
+    .date{
+        color: var(--grey);
+    }
+
+    .description{
+        color: #000000;
+    }
+
+    .value{
+        color: var(--green);
+    }
+
+    .balance{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        top: 92%;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .balance-name{
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #000000;
+    }
+
+    .balance-value{
+        color: var(--green);
     }
 `;
 
