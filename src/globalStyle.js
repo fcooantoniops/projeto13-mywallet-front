@@ -62,14 +62,16 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .root{
-        width: 100vw;
-        height: 100vh;
-        font-family: 'Raleway', sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--purple);
-        color: #FFFFFF;
+        @media (min-width: 320px) and (max-width: 660px) {
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Raleway', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--purple);
+            color: #FFFFFF;
+        }
     }
 
     a{

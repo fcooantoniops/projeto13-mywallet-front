@@ -12,11 +12,19 @@ export default function InOutScreen(){
                 <InOutContainer>
                     <h1>{((location.pathname === "/new-entry") ?  <>Nova entrada</> : <>Nova saída</>)}</h1>
                     <FormLayout>
-                        <input type="text" placeholder="Valor"/>
-                        <input type="text" placeholder="Descrição"/>
-                        <SendingButtonLayout>
-                            {((location.pathname === "/new-entry") ?  <>Salvar entrada</> : <>Salvar saída</>)}
-                        </SendingButtonLayout>
+                        {((location.pathname === "/new-entry") ? 
+                            <>
+                                <input type="text" placeholder="Valor"/>
+                                <input type="text" placeholder="Descrição"/>
+                                <SendingButtonLayout>Salvar entrada</SendingButtonLayout>
+                            </>
+                            : 
+                            <>
+                                <input type="text" placeholder="Valor"/>
+                                <input type="text" placeholder="Descrição"/>
+                                <SendingButtonLayout>Salvar saída</SendingButtonLayout>
+                            </>
+                        )}
                     </FormLayout>
                 </InOutContainer>
             </PageLayout>
